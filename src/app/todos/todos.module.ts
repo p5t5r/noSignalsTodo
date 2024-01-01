@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { TodosComponent } from 'src/app/todos/components/todos/todos.component';
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-{
-  path: '',
-  component: TodosComponent
-}
+  {
+    path: '',
+    component: TodosComponent,
+  },
 ];
 
 @NgModule({
   declarations: [
-    TodosComponent
+    TodosComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule, RouterModule.forChild(routes)],
+  providers: [],
 })
-
-export class TodosModule { }
+export class TodosModule {}
