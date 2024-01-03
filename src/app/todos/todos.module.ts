@@ -12,10 +12,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    TodosComponent,
-  ],
+  declarations: [TodosComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
   providers: [],
 })
+
 export class TodosModule {}
